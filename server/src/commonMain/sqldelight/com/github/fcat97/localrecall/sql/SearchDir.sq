@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS searchPath (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    path TEXT NOT NULL UNIQUE
+);
+
+getAllPaths:
+SELECT * FROM searchPath;
+
+addPath:
+INSERT INTO searchPath(path) VALUES(?);
+
+removePath:
+DELETE FROM searchPath WHERE path=:path;
+
